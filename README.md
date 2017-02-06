@@ -11,6 +11,7 @@ How to use
 
 Tip:
 In your browser address bar set start=0 and end=200 (200 is the maximum number of items that is returned in web AH): 
+
 /browse?filterId=-1&maxLvl=-1&start=0&qual=1&end=200&minLvl=-1&sort=quantity&reverse=false&n=fatty+bear
 
 Note:
