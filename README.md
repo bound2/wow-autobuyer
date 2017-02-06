@@ -4,11 +4,12 @@ Buy items at desired price from World of Warcraft web auction house
 How to use
 
 1. Modify the desiredItemName and desiredItemPrice (in gold).
-2. Open your broswer in "Incognito mode" to prevent cookie saving.
-3. Open developer console of your favourite browser.
-4. Copy the buy_stuff.js contents into console.
-5. Enjoy the things you just bought
-6. Use printStatistics("Your desired item name here") in developer console to print out how many items have been bought.
+2. Open your favourite broswer in "Incognito mode" to prevent cookie saving.
+3. Open WoW web auction house.
+4. Open developer console.
+5. Copy the buy_stuff.js contents into console.
+6. Enjoy the things you just bought
+7. Use printStatistics("Your desired item name here") in developer console to print out how many items have been bought.
 
 Tip:
 In your browser address bar set start=0 and end=200 (200 is the maximum number of items that is returned in web AH): 
