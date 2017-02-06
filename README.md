@@ -8,6 +8,7 @@ How to use
 3. Open developer console of your favourite browser.
 4. Copy the buy_stuff.js contents into console.
 5. Enjoy the things you just bought
+6. Use printStatistics("Your desired item name here") in developer console to print out how many items have been bought.
 
 Tip:
 In your browser address bar set start=0 and end=200 (200 is the maximum number of items that is returned in web AH): 
