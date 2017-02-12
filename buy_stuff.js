@@ -1,6 +1,6 @@
 $(document).ready(function() {
     console.log("finding something to buy");
-    var baseTimeout = 150000;
+    var baseTimeout = 600000;
     var desiredItemName = "Fatty Bearsteak";
     var desiredItemPrice = 13;
     buyDesiredItems(desiredItemName, desiredItemPrice);
@@ -13,15 +13,21 @@ function buyDesiredItems(desiredItemName, desiredItemPrice) {
         var itemName = $(this).children('.item').children('a').children('strong').html();
         var quantity = $(this).children('.quantity').html();
 
+        var counter = 0;
         if (itemName == desiredItemName) {
            var buyoutInGold = $(this).children('.price').children('.price-buyout').children('span:nth-child(1)').html();
            var buyoutInSilver = $(this).children('.price').children('.price-buyout').children('span:nth-child(2)').html();
            var buyoutInCopper = $(this).children('.price').children('.price-buyout').children('span:nth-child(3)').html();
            if (buyoutInGold / quantity <= desiredItemPrice && buyoutInGold != "--") {
-              var totalBuyoutPrice = buyoutInGold * 1000 + buyoutInSilver * 100 + buyoutInCopper;
-              console.log("Trying to buy " + desiredItemName + " x" + quantity + " for " + buyoutInGold + " gold");
-              Auction.buyout(itemId, totalBuyoutPrice, $(this).children('.options').children('a:nth-child(2)'));
-              saveStatistics(itemName, quantity, buyoutInGold);
+              counter++;
+              setTimeout(function() {
+
+                 var totalBuyoutPrice = buyoutInGold * 1000 + buyoutInSilver * 100 + buyoutInCopper;
+                 console.log("Trying to buy " + desiredItemName + " x" + quantity + " for " + buyoutInGold + " gold");
+                 Auction.buyout(itemId, totalBuyoutPrice, $(this).children('.options').children('a:nth-child(2)'));
+                 saveStatistics(itemName, quantity, buyoutInGold);
+
+              }, counter * getRandomInt(100, 175));
            }
         }
         
